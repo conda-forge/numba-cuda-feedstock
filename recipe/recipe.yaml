@@ -18,11 +18,11 @@ build:
 
 requirements:
   host:
-    - python
+    - python >=3.9
     - pip
     - setuptools
   run:
-    - python
+    - python >=3.9
     - numba >=0.59.1
 
 tests:
@@ -44,4 +44,3 @@ about:
 extra:
   recipe-maintainers:
     - gmarkall
-
