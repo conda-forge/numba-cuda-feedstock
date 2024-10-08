@@ -1,7 +1,7 @@
 context:
   name: numba-cuda
   sdist_name: numba_cuda
-  version: "0.0.15"
+  version: "0.0.17"
 
 package:
   name: ${{ name }}
@@ -9,20 +9,20 @@ package:
 
 source:
   url: https://pypi.io/packages/source/${{ name[0] }}/${{ name }}/${{ sdist_name }}-${{ version }}.tar.gz
-  sha256: 42d3919d006421510004c89ac2de03222da95e4fc59cfc7c3c736891e38ea307
+  sha256: 62e4ab17e07131961dfc41c0bc825318dcf1ebced10b220496638b629421fc54
 
 build:
   noarch: python
   script: python -m pip install . -vv
-  number: 1
+  number: 0
 
 requirements:
   host:
-    - python
+    - python >=3.9
     - pip
     - setuptools
   run:
-    - python
+    - python >=3.9
     - numba >=0.59.1
 
 tests:
@@ -44,4 +44,3 @@ about:
 extra:
   recipe-maintainers:
     - gmarkall
-
