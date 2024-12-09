@@ -3,11 +3,15 @@ About numba-cuda-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/numba-cuda-feedstock/blob/main/LICENSE.txt)
 
-
+Home: https://github.com/NVIDIA/numba-cuda
 
 Package license: BSD-2-Clause
 
 Summary: A CUDA target for Numba
+
+Development: https://github.com/NVIDIA/numba-cuda
+
+Documentation: https://nvidia.github.io/numba-cuda
 
 A Numba target for compiling Python code to excute on CUDA GPUs.
 
@@ -145,5 +149,4 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
-* [@gmarkall](https://github.com/gmarkall/)
 
