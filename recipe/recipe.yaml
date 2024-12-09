@@ -26,6 +26,10 @@ requirements:
     - numba >=0.59.1
 
 tests:
+  - requirements:
+     run:
+       - python ${{ python_min }}
+       - pip
   - python:
       imports:
       - numba_cuda
