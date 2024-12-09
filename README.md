@@ -149,5 +149,7 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
+* [@bdice](https://github.com/bdice/)
 * [@gmarkall](https://github.com/gmarkall/)
+* [@vyasr](https://github.com/vyasr/)
 
