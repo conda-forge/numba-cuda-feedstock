@@ -30,9 +30,9 @@ tests:
      run:
        - python ${{ python_min }}
        - pip
-  - python:
-      imports:
-      - numba_cuda
+  - script:
+      - python -m pip check
+      - python -c "import numba_cuda"
       pip_check: true
 
 about:
