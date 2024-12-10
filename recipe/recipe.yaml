@@ -33,7 +33,6 @@ tests:
   - script:
       - python -m pip check
       - python -c "import numba_cuda"
-      pip_check: true
 
 about:
   homepage: https://github.com/NVIDIA/numba-cuda
