@@ -31,7 +31,7 @@ tests:
       run:
         - python ${{ python_min }}
         - pip
-  - script:
+    script:
       - python -m pip check
       - python -c "import numba_cuda"
 
