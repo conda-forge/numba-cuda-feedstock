@@ -27,9 +27,9 @@ requirements:
 
 tests:
   - requirements:
-     run:
-       - python ${{ python_min }}
-       - pip
+      run:
+        - python ${{ python_min }}
+        - pip
   - script:
       - python -m pip check
       - python -c "import numba_cuda"
