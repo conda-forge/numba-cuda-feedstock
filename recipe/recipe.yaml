@@ -1,15 +1,16 @@
 context:
   name: numba-cuda
   sdist_name: numba_cuda
-  version: "0.0.17"
+  version: "0.0.17.1"
+  python_min: "3.9"
 
 package:
   name: ${{ name }}
   version: ${{ version }}
 
 source:
-  url: https://pypi.io/packages/source/${{ name[0] }}/${{ name }}/${{ sdist_name }}-${{ version }}.tar.gz
-  sha256: 62e4ab17e07131961dfc41c0bc825318dcf1ebced10b220496638b629421fc54
+  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ sdist_name }}-${{ version }}.tar.gz
+  sha256: 6963e0f5ea7838700eb1ff7017070e2b4a31791fd1072cd8d514e85609786499
 
 build:
   noarch: python
@@ -18,18 +19,21 @@ build:
 
 requirements:
   host:
-    - python
+    - python ${{ python_min }}
     - pip
     - setuptools
   run:
-    - python
+    - python >=${{ python_min }}
     - numba >=0.59.1
 
 tests:
-  - python:
-      imports:
-      - numba_cuda
-      pip_check: true
+  - requirements:
+      run:
+        - python ${{ python_min }}
+        - pip
+    script:
+      - python -m pip check
+      - python -c "import numba_cuda"
 
 about:
   homepage: https://github.com/NVIDIA/numba-cuda
@@ -43,5 +47,6 @@ about:
 
 extra:
   recipe-maintainers:
+    - bdice
     - gmarkall
-
+    - vyasr
