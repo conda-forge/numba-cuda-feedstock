@@ -151,5 +151,6 @@ Feedstock Maintainers
 
 * [@bdice](https://github.com/bdice/)
 * [@gmarkall](https://github.com/gmarkall/)
+* [@kkraus14](https://github.com/kkraus14/)
 * [@vyasr](https://github.com/vyasr/)
 
