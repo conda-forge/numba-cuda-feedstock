@@ -18,18 +18,21 @@ build:
 
 requirements:
   host:
-    - python ${{ python_min }}
+    - python {{ python_min }}
     - pip
     - setuptools
   run:
-    - python >=${{ python_min }}
+    - python >={{ python_min }}
     - numba >=0.59.1
 
-tests:
-  - python:
-      imports:
-      - numba_cuda
-      pip_check: true
+test:
+  requires:
+    - python {{ python_min }}
+    - pip
+  imports:
+    - numba_cuda
+  commands:
+    - pip check
 
 about:
   homepage: https://github.com/NVIDIA/numba-cuda
@@ -46,3 +49,4 @@ extra:
     - bdice
     - gmarkall
     - vyasr
+    - kkraus14
