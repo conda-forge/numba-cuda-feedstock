@@ -1,7 +1,7 @@
 context:
   name: numba-cuda
   sdist_name: numba_cuda
-  version: "0.5.0"
+  version: "0.7.0"
 
 package:
   name: ${{ name }}
@@ -9,7 +9,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ sdist_name }}-${{ version }}.tar.gz
-  sha256: 0efd56d9327419cc5b58df440ea1edb62d627cb3d6ae5b99e4762f5f33faefb4
+  sha256: 38cce91ba47855c0bd3724435c029d810ddf37d1efe8038091a34bc43174dc69
 
 build:
   noarch: python
@@ -25,14 +25,11 @@ requirements:
     - python >={{ python_min }}
     - numba >=0.59.1
 
-test:
-  requires:
-    - python {{ python_min }}
-    - pip
-  imports:
-    - numba_cuda
-  commands:
-    - pip check
+tests:
+  - python:
+      imports:
+        - numba_cuda
+      pip_check: true
 
 about:
   homepage: https://github.com/NVIDIA/numba-cuda
