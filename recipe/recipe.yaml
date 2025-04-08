@@ -14,15 +14,15 @@ source:
 build:
   noarch: python
   script: python -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
-    - python >=3.9
+    - python ${{ python_min }}.*
     - pip
     - setuptools
   run:
-    - python >=3.9
+    - python >=${{ python_min }}
     - numba >=0.59.1
 
 tests:
@@ -30,6 +30,7 @@ tests:
       imports:
         - numba_cuda
       pip_check: true
+      python_version: ${{ python_min }}.*
 
 about:
   homepage: https://github.com/NVIDIA/numba-cuda
@@ -46,3 +47,4 @@ extra:
     - bdice
     - gmarkall
     - vyasr
+    - kkraus14
