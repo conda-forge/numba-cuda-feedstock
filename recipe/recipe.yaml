@@ -24,6 +24,7 @@ requirements:
   run:
     - python >=${{ python_min }}
     - numba >=0.59.1
+    - cuda-bindings
 
 tests:
   - python:
