@@ -154,6 +154,3 @@ Feedstock Maintainers
 * [@kkraus14](https://github.com/kkraus14/)
 * [@vyasr](https://github.com/vyasr/)
 
-
-<!-- dummy commit to enable rerendering -->
-
