@@ -28,6 +28,10 @@ requirements:
     - if: cuda_version == "12+"
       then:
         - cuda-cudart-dev
+        - cuda-version >=12
+    - if: cuda_version == "11"
+      then:
+        - cuda-version >=11.2,<12
 
 tests:
   - python:
