@@ -15,11 +15,8 @@ build:
   noarch: python
   script: python -m pip install . -vv
   number: 1
-  skip: cuda_compiler_version == "None"
 
 requirements:
-  build:
-    - ${{ compiler('cuda') }} 
   host:
     - python ${{ python_min }}.*
     - pip
@@ -28,7 +25,7 @@ requirements:
     - python >=${{ python_min }}
     - numba >=0.59.1
     - cuda-bindings  # Includes nvrtc, nvvm, libdevice for CUDA 12, cudatoolkit for CUDA 11
-    - if: match(cuda_compiler_version, ">=12")
+    - if: cuda_version == "12+"
       then:
         - cuda-cudart-dev
 
