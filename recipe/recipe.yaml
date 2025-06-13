@@ -1,7 +1,7 @@
 context:
   name: numba-cuda
   sdist_name: numba_cuda
-  version: "0.14.0"
+  version: "0.15.0"
 
 package:
   name: ${{ name }}
@@ -9,7 +9,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ sdist_name }}-${{ version }}.tar.gz
-  sha256: 943c34cc4f406a74a1358b13429e9be3c64bf2662c54f278111c66705094be1a
+  sha256: eb0b0621b93fc4ed36e8cdac68b9ad1d408e249c2e4d3e93fb7c37ffe0580448
 
 build:
   noarch: python
@@ -24,6 +24,9 @@ requirements:
   run:
     - python >=${{ python_min }}
     - numba >=0.59.1
+    - cuda-version >=11.2
+    - cuda-bindings  # Includes nvrtc, nvvm, libdevice
+    - cuda-cudart-dev  # Includes cudadevrt
 
 tests:
   - python:
