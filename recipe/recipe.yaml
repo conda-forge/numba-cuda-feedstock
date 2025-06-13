@@ -24,7 +24,9 @@ requirements:
   run:
     - python >=${{ python_min }}
     - numba >=0.59.1
-    - cuda-bindings
+    - cuda-version >=11.2
+    - cuda-bindings  # Includes nvrtc, nvvm, libdevice
+    - cuda-cudart-dev  # Includes cudadevrt
 
 tests:
   - python:
