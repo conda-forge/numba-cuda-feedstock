@@ -14,7 +14,7 @@ source:
 build:
   noarch: python
   script: python -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
@@ -24,9 +24,14 @@ requirements:
   run:
     - python >=${{ python_min }}
     - numba >=0.59.1
-    - cuda-version >=11.2
-    - cuda-bindings  # Includes nvrtc, nvvm, libdevice
-    - cuda-cudart-dev  # Includes cudadevrt
+    - cuda-bindings  # Includes nvrtc, nvvm, libdevice for CUDA 12, cudatoolkit for CUDA 11
+    - if: cuda_version == "12+"
+      then:
+        - cuda-cudart-dev
+        - cuda-version >=12
+    - if: cuda_version == "11"
+      then:
+        - cuda-version >=11.2,<12
 
 tests:
   - python:
