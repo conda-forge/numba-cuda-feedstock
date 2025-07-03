@@ -25,6 +25,7 @@ requirements:
     - python >=${{ python_min }}
     - numba >=0.59.1
     - cuda-bindings  # Includes nvrtc, nvvm, libdevice for CUDA 12, cudatoolkit for CUDA 11
+    - cuda-core ~=0.3  # >=0.3,<0.4 
     - if: cuda_version == "12+"
       then:
         - cuda-cudart-dev
