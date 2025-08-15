@@ -1,7 +1,7 @@
 context:
   name: numba-cuda
   sdist_name: numba_cuda
-  version: "0.18.1"
+  version: "0.19.0"
 
 package:
   name: ${{ name }}
@@ -9,7 +9,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ sdist_name }}-${{ version }}.tar.gz
-  sha256: 474bf96d6f96ef0b727fe15b2a5d5122843829a1d070fbc0f81e04238b922e06
+  sha256: 8d6333713335009a87a4dc88a8516be9f66b0fa0f714c3cd858496435dba1269
 
 build:
   noarch: python
@@ -23,16 +23,11 @@ requirements:
     - setuptools
   run:
     - python >=${{ python_min }}
-    - numba >=0.59.1
-    - cuda-bindings  # Includes nvrtc, nvvm, libdevice for CUDA 12, cudatoolkit for CUDA 11
-    - cuda-core ~=0.3  # >=0.3,<0.4 
-    - if: cuda_version == "12+"
-      then:
-        - cuda-cudart-dev
-        - cuda-version >=12
-    - if: cuda_version == "11"
-      then:
-        - cuda-version >=11.2,<12
+    - numba >=0.60.0
+    - cuda-bindings >=12.9.1
+    - cuda-core ~=0.3  # >=0.3,<0.4
+    - cuda-cudart-dev
+    - cuda-version >=12 
 
 tests:
   - python:
