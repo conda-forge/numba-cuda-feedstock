@@ -28,7 +28,7 @@ requirements:
     - cuda-core ~=0.3  # >=0.3,<0.4
     - cuda-cudart-dev
     - cuda-version >=12 
-    - cuda-nvvm-tools
+    - cuda-nvcc-impl
 
 tests:
   - python:
