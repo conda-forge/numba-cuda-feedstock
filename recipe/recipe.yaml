@@ -1,7 +1,7 @@
 context:
   name: numba-cuda
   sdist_name: numba_cuda
-  version: "0.19.1"
+  version: "0.20.0"
 
 package:
   name: ${{ name }}
@@ -9,7 +9,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ sdist_name }}-${{ version }}.tar.gz
-  sha256: 181600ca8cbdc5984c3b4198880f71029b116dfde0397bceef666ff830a72c90
+  sha256: 85130f5db8b5539c4f3887323e6cf838cce134b16fb1c9555d3d74a893f274a4
 
 build:
   noarch: python
