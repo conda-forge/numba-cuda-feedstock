@@ -1,7 +1,7 @@
 context:
   name: numba-cuda
   sdist_name: numba_cuda
-  version: "0.20.0"
+  version: 0.20.1
 
 package:
   name: ${{ name }}
@@ -9,12 +9,12 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ sdist_name }}-${{ version }}.tar.gz
-  sha256: 85130f5db8b5539c4f3887323e6cf838cce134b16fb1c9555d3d74a893f274a4
+  sha256: 8bdf7eb96be9f4d308dd47cd99c7da163ba7ba1ac44f8901ddccce94bbbe921b
 
 build:
   noarch: python
   script: python -m pip install . -vv
-  number: 2
+  number: 0
 
 requirements:
   host:
@@ -27,7 +27,7 @@ requirements:
     - cuda-bindings >=12.9.1
     - cuda-core ~=0.3  # >=0.3,<0.4
     - cuda-cudart-dev
-    - cuda-version >=12 
+    - cuda-version >=12
     - cuda-nvcc-impl
 
 tests:
@@ -39,7 +39,7 @@ tests:
 
 about:
   homepage: https://github.com/NVIDIA/numba-cuda
-  summary: 'A CUDA target for Numba'
+  summary: A CUDA target for Numba
   description: |
     A Numba target for compiling Python code to excute on CUDA GPUs.
   license: BSD-2-Clause
