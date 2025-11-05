@@ -24,6 +24,12 @@ requirements:
   run:
     - python >=${{ python_min }}
     - numba >=0.60.0
+    - cuda-bindings >=12.9.1
+    - cuda-core ~=0.3  # >=0.3,<0.4
+    - cuda-cudart-dev
+    - cuda-version >=12
+    - cuda-nvcc-impl
+
 tests:
   - python:
       imports:
