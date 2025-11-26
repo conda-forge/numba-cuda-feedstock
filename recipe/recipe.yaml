@@ -17,18 +17,17 @@ build:
 
 requirements:
   build:
-    - python                                 # [build_platform != target_platform]
-    - cross-python_{{ target_platform }}     # [build_platform != target_platform]
-    - numpy >=1.24                           # [build_platform != target_platform]
+    - python
+    - numpy >=1.24
     - c-compiler
     - cxx-compiler
   host:
-    - python ${{ python_min }}.*
+    - python
     - pip
     - setuptools
     - numpy >=2.1.0
   run:
-    - python >=${{ python_min }}
+    - python
     - numba >=0.60.0
     - cuda-bindings >=12.9.1
     - cuda-core >=0.3,<1.0.0
