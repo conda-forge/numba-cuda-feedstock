@@ -29,7 +29,7 @@ requirements:
   run:
     - python
     - numba >=0.60.0
-    - numpy >=2.1.0
+    - numpy >=1.22
     - cuda-bindings >=12.9.1
     - cuda-core >=0.3,<1.0.0
     - cuda-cudart-dev
