@@ -1,0 +1,4 @@
+target_platform:
+  - win-64
+  - linux-64
+  - linux-aarch64
