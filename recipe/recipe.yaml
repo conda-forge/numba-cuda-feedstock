@@ -20,9 +20,8 @@ requirements:
     - python                                 # [build_platform != target_platform]
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - numpy >=1.24                           # [build_platform != target_platform]
-    - {{ stdlib('c') }}
-    - {{ compiler('c') }}
-    - {{ compiler('cxx') }}
+    - c-compiler
+    - cxx-compiler
   host:
     - python ${{ python_min }}.*
     - pip
