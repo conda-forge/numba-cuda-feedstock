@@ -45,7 +45,7 @@ about:
   homepage: https://github.com/NVIDIA/numba-cuda
   summary: A CUDA target for Numba
   description: |
-    A Numba target for compiling Python code to excute on CUDA GPUs.
+    A Numba target for compiling Python code to execute on CUDA GPUs.
   license: BSD-2-Clause
   license_file: LICENSE
   documentation: https://nvidia.github.io/numba-cuda
