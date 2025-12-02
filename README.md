@@ -250,5 +250,6 @@ Feedstock Maintainers
 * [@gmarkall](https://github.com/gmarkall/)
 * [@kkraus14](https://github.com/kkraus14/)
 * [@leofang](https://github.com/leofang/)
+* [@rparolin](https://github.com/rparolin/)
 * [@vyasr](https://github.com/vyasr/)
 
