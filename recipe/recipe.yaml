@@ -1,7 +1,7 @@
 context:
   name: numba-cuda
   sdist_name: numba_cuda
-  version: 0.21.2
+  version: 0.21.3
 
 package:
   name: ${{ name }}
@@ -9,12 +9,12 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ sdist_name }}-${{ version }}.tar.gz
-  sha256: 18d033989c65cf9d2bf37e15c84b3a702b8276d8ec8fde5917f99517529ffa6f
+  sha256: aca7fb0fa9bc28f73638ddd4076fe83d6b29fe1a862af5f04ed21b0505177105
 
 build:
   script: python -m pip install . -vv
   number: 0
-  skip: ["osx"]
+  skip: [osx]
 
 requirements:
   build:
@@ -29,13 +29,9 @@ requirements:
   run:
     - python
     - numba >=0.60.0
-    - numpy >=1.22
-    - cuda-bindings >=12.9.1
-    - cuda-core >=0.3,<1.0.0
-    - cuda-cudart-dev
-    - cuda-version >=12
-    - cuda-nvcc-impl
-
+    - numpy
+    - cuda-bindings >=12.9.1,<14.0.0
+    - cuda-core >=0.3.2,<1.0.0
 tests:
   - python:
       imports:
