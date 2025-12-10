@@ -11,7 +11,7 @@ github:
   tooling_branch_name: main
 linter:
   skip:
-    - lint_noarch_selectors
+  - lint_noarch_selectors
 provider:
   linux_aarch64: default
 test: native_and_emulated
