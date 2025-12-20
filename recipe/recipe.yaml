@@ -9,7 +9,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ sdist_name }}-${{ version }}.tar.gz
-  sha256: db6ea2f95291a44e26d84f99cec85ef8b2eece17cf173ebb911f6e8713ea1ae6
+  sha256: e8c19bc1174dfc3596259381fa708f1c3397a618bdbbaa5d068bcc56af8fd921
 
 build:
   script: python -m pip install . -vv
