@@ -13,7 +13,7 @@ source:
 
 build:
   script: python -m pip install . -vv
-  number: 0
+  number: 1
   skip: [osx]
 
 requirements:
@@ -35,6 +35,7 @@ requirements:
     - cuda-cudart-dev
     - cuda-version >=12
     - cuda-nvcc-impl
+    - packaging
 
 tests:
   - python:
