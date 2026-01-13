@@ -55,6 +55,7 @@ about:
 
 extra:
   recipe-maintainers:
+    - brandon-b-miller
     - rparolin
     - conda-forge/cuda-python
     - leofang
