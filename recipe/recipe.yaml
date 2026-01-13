@@ -29,10 +29,14 @@ requirements:
   run:
     - python
     - numba >=0.60.0
-    - numpy
+    - numpy >=1.22
     - cuda-bindings >=12.9.1,<14.0.0
     - cuda-core >=0.3.2,<1.0.0
+    - cuda-cudart-dev
+    - cuda-version >=12
+    - cuda-nvcc-impl
     - packaging
+
 tests:
   - python:
       imports:
