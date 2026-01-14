@@ -1,7 +1,7 @@
 context:
   name: numba-cuda
   sdist_name: numba_cuda
-  version: "0.19.2rc1"
+  version: "0.19.2rc0"
 
 package:
   name: ${{ name }}
@@ -14,7 +14,7 @@ source:
 build:
   noarch: python
   script: python -m pip install . -vv
-  number: 0
+  number: 2
 
 requirements:
   host:
