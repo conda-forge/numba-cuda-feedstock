@@ -14,7 +14,7 @@ source:
 build:
   noarch: python
   script: python -m pip install . -vv
-  number: 1
+  number: 2
 
 requirements:
   host:
@@ -28,6 +28,7 @@ requirements:
     - cuda-core ~=0.3  # >=0.3,<0.4
     - cuda-cudart-dev
     - cuda-version >=12 
+    - cuda-nvcc-impl
 
 tests:
   - python:
