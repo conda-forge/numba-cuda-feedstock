@@ -14,7 +14,7 @@ source:
 build:
   script: python -m pip install . -vv
   number: 1
-  skip: [osx]
+  skip: [osx or ppc64le]
 
 requirements:
   build:
