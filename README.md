@@ -38,14 +38,14 @@ Current release info
 Installing numba-cuda
 =====================
 
-Installing `numba-cuda` from the `conda-forge/label/numba_cuda_rc` channel can be achieved by adding `conda-forge/label/numba_cuda_rc` to your channels with:
+Installing `numba-cuda` from the `conda-forge` channel can be achieved by adding `conda-forge` to your channels with:
 
 ```
-conda config --add channels conda-forge/label/numba_cuda_rc
+conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge/label/numba_cuda_rc` channel has been enabled, `numba-cuda` can be installed with `conda`:
+Once the `conda-forge` channel has been enabled, `numba-cuda` can be installed with `conda`:
 
 ```
 conda install numba-cuda
@@ -60,26 +60,26 @@ mamba install numba-cuda
 It is possible to list all of the versions of `numba-cuda` available on your platform with `conda`:
 
 ```
-conda search numba-cuda --channel conda-forge/label/numba_cuda_rc
+conda search numba-cuda --channel conda-forge
 ```
 
 or with `mamba`:
 
 ```
-mamba search numba-cuda --channel conda-forge/label/numba_cuda_rc
+mamba search numba-cuda --channel conda-forge
 ```
 
 Alternatively, `mamba repoquery` may provide more information:
 
 ```
 # Search all versions available on your platform:
-mamba repoquery search numba-cuda --channel conda-forge/label/numba_cuda_rc
+mamba repoquery search numba-cuda --channel conda-forge
 
 # List packages depending on `numba-cuda`:
-mamba repoquery whoneeds numba-cuda --channel conda-forge/label/numba_cuda_rc
+mamba repoquery whoneeds numba-cuda --channel conda-forge
 
 # List dependencies of `numba-cuda`:
-mamba repoquery depends numba-cuda --channel conda-forge/label/numba_cuda_rc
+mamba repoquery depends numba-cuda --channel conda-forge
 ```
 
 
