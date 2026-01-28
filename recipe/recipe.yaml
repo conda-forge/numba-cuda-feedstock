@@ -1,19 +1,19 @@
 context:
   name: numba-cuda
   sdist_name: numba_cuda
-  version: 0.24.0
+  version: 0.25.0
 
 package:
   name: ${{ name }}
   version: ${{ version }}
 
 source:
-  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ sdist_name }}-${{ version }}.tar.gz
-  sha256: f15a11a8d224e160e9cb2345049c5fa0bbd49eb255b2e8f661086746a7feb378
+  url: https://github.com/NVIDIA/numba-cuda/archive/refs/tags/v${{ version }}.tar.gz
+  sha256: b32406f5b631f5870d00f79b50d96ffc3b683c71283b825bca36889cc6336630
 
 build:
   script: python -m pip install . -vv
-  number: 1
+  number: 0
   skip: [osx or ppc64le]
 
 requirements:
