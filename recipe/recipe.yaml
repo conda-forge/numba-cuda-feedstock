@@ -1,7 +1,7 @@
 context:
   name: numba-cuda
   sdist_name: numba_cuda
-  version: "0.28.2"
+  version: "0.30.1"
 
 package:
   name: ${{ name }}
@@ -9,7 +9,7 @@ package:
 
 source:
   url: https://github.com/NVIDIA/numba-cuda/archive/refs/tags/v${{ version }}.tar.gz
-  sha256: 39bbadabeae25f90e944fcf5131b97df5f3e1b90d328b805389225a55fe899d5
+  sha256: 7014ab9d77983276ff346de1049920f436b3f1f7844cb0d67e0e6c0e7bf6744c
 
 build:
   script: python -m pip install . -vv
