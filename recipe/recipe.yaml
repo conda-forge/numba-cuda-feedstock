@@ -21,7 +21,7 @@ build:
         - export CXXFLAGS="${CXXFLAGS} -fno-use-linker-plugin"
         - export LDFLAGS="${LDFLAGS} -fno-use-linker-plugin"
     - python -m pip install . -vv
-  number: 0
+  number: 1
   skip: [osx or ppc64le]
 
 requirements:
